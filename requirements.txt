@@ -1,4 +1,9 @@
 langchain
 langchain-community
+langchain-chroma
+langchain-experimental
+langchain-openai
 pytest
 python-dotenv
+chromadb
+openai
