@@ -5,5 +5,8 @@ langchain-experimental
 langchain-openai
 pytest
 python-dotenv
+# requires c++ build package
 chromadb
 openai
+voyage_ai
+chromadb
