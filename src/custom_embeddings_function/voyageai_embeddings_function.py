@@ -8,9 +8,9 @@ from chromadb import Documents, EmbeddingFunction, Embeddings
 # voyageai docs: https://docs.voyageai.com/docs/embeddings
 # chromadb OpenAIEmbeddingFunction source code line 112: https://github.com/chroma-core/chroma/blob/main/chromadb/utils/embedding_functions.py
 class VoyageAIEmbeddingFunction(EmbeddingFunction[Documents]):
-    def __init__(self, api_key: str, model: str, input_type: str):
+    def __init__(self, api_key: str, model_name: str, input_type: str):
         self.api_key = api_key
-        self.model = model
+        self.model = model_name
         self.input_type = input_type
         self._client = voyageai.Client(api_key=api_key)
 

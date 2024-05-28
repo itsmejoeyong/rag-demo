@@ -19,7 +19,7 @@ def mock_voyage_client():
 
 def test_voyageai_embedding_function_init(mock_voyage_client):
     embedding_function = VoyageAIEmbeddingFunction(
-        api_key="test", model="test_model", input_type="test"
+        api_key="test", model_name="test_model", input_type="test"
     )
     assert embedding_function.api_key == "test"
     assert embedding_function.model == "test_model"
@@ -29,7 +29,7 @@ def test_voyageai_embedding_function_init(mock_voyage_client):
 
 def test_voyageai_embedding_function_call(mock_voyage_client):
     embedding_function = VoyageAIEmbeddingFunction(
-        api_key="test", model="test_model", input_type="test"
+        api_key="test", model_name="test_model", input_type="test"
     )
     docs = ["Hello", "world!"]
     embeddings = embedding_function(docs)

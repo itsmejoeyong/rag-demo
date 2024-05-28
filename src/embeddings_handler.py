@@ -65,7 +65,7 @@ class EmbeddingsHandler:
 def embeddings_factory(embeddings_function: str):
     if embeddings_function == "openai":
         return OpenAIEmbeddingsAdapter
-    elif embedding_functions == "voyageai":
+    elif embeddings_function == "voyageai":
         return VoyageAIEmbeddingsAdapter
     else:
         raise ValueError(f"Unknown embeddings function: {embeddings_function}")
