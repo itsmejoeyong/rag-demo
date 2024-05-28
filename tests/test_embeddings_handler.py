@@ -39,14 +39,12 @@ def embeddings_handler_openai(openai_embeddings_adapter):
 
 
 def test_voyageai_init_embedding_function(voyageai_embeddings_adapter):
-    adapter = VoyageAIEmbeddingsAdapter(
-        api_key="test_api_key", model_name="test_model", input_type="test_input_type"
-    )
-    voyageai_ef = adapter.init_embedding_function()
+    adapter = VoyageAIEmbeddingsAdapter(api_key="test_api_key", model_name="test_model")
+    voyageai_ef = adapter.init_embedding_function(input_type="test")
 
     assert isinstance(voyageai_ef, MagicMock)
     voyageai_embeddings_adapter.assert_called_once_with(
-        api_key="test_api_key", model_name="test_model", input_type="test_input_type"
+        api_key="test_api_key", model_name="test_model", input_type="test"
     )
 
 

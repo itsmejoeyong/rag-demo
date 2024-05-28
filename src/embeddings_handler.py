@@ -12,16 +12,15 @@ class EmbeddingsFunction(Protocol):
 
 # Implementing custom voyage ai logic as adapter as of 2024-05-27
 class VoyageAIEmbeddingsAdapter:
-    def __init__(self, api_key: str, model_name: str, input_type: str = "document"):
+    def __init__(self, api_key: str, model_name: str):
         self.api_key = api_key
         self.model_name = model_name
-        self.input_type = input_type
 
-    def init_embedding_function(self):
+    def init_embedding_function(self, input_type: str = "document"):
         voyageai_ef = VoyageAIEmbeddingFunction(
             api_key=self.api_key,
             model_name=self.model_name,
-            input_type=self.input_type,
+            input_type=input_type,
         )
         return voyageai_ef
 
