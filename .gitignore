@@ -160,3 +160,5 @@ cython_debug/
 #.idea/
 databases/*/
 *.sqlite3
+__*
+*test*
